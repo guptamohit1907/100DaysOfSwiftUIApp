@@ -15,19 +15,10 @@ struct Flower : Shape {
     }
 }
 struct ContentView: View {
-    @State private var petalOffset = -20.0
-    @State private var petalWidth = 100.0
-    var body: some View {
-        VStack {
-            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(.red, style: FillStyle(eoFill: true))
-            Text("Offset")
-            Slider(value: $petalOffset, in : -40...40)
-                .padding([.horizontal, .bottom])
-            Text("Width")
-            Slider(value: $petalOffset, in : 0...100)
-                .padding([.horizontal])
-        }
+    var body: some View{
+        Capsule()
+            .strokeBorder(ImagePaint(image: Image("Example"),sourceRect: CGRect(x: 0, y: 0.25, width: 1, height: 0.5), scale: 0.3), lineWidth: 20)
+            .frame(width: 300, height: 300)
     }
 }
 
