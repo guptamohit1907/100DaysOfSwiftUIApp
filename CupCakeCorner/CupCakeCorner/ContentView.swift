@@ -3,7 +3,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var order = Order()
-    
     var body: some View {
         NavigationView{
             Form {
@@ -16,7 +15,6 @@ struct ContentView: View {
                     Stepper("Number of cakes: \(order.quantity)", value: $order
                         .quantity, in : 3...20)
                 }
-                
                 Section {
                     Toggle("Any Special request?", isOn: $order.specialRequestEnabled.animation())
                     
@@ -24,8 +22,7 @@ struct ContentView: View {
                         Toggle("Add extra frosting", isOn: $order.extraFrosting)
                         Toggle("Add extra sprinkles", isOn: $order.addSprinkles)
                     } 
-                }
-                
+                }                
                 Section{
                     NavigationLink{
                         AddressView(order: order)
