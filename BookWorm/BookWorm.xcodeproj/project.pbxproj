@@ -15,6 +15,7 @@
 		86D401162A34EC5B00CF0090 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D401152A34EC5B00CF0090 /* DataController.swift */; };
 		86D401182A35092B00CF0090 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D401172A35092B00CF0090 /* AddBookView.swift */; };
 		86D4011A2A351E8800CF0090 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D401192A351E8800CF0090 /* RatingView.swift */; };
+		86D4011C2A35244500CF0090 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D4011B2A35244500CF0090 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		86D401152A34EC5B00CF0090 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		86D401172A35092B00CF0090 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		86D401192A351E8800CF0090 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		86D4011B2A35244500CF0090 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				86D401172A35092B00CF0090 /* AddBookView.swift */,
 				86D401152A34EC5B00CF0090 /* DataController.swift */,
 				86A7C2AC2A2E163200C9264A /* BookWormApp.swift */,
+				86D4011B2A35244500CF0090 /* EmojiRatingView.swift */,
 				86A7C2AE2A2E163200C9264A /* ContentView.swift */,
 				86D401122A34EBDB00CF0090 /* Bookworm.xcdatamodeld */,
 				86A7C2B02A2E163300C9264A /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			files = (
 				86D401142A34EBDB00CF0090 /* Bookworm.xcdatamodeld in Sources */,
 				86D401162A34EC5B00CF0090 /* DataController.swift in Sources */,
+				86D4011C2A35244500CF0090 /* EmojiRatingView.swift in Sources */,
 				86A7C2AF2A2E163200C9264A /* ContentView.swift in Sources */,
 				86D4011A2A351E8800CF0090 /* RatingView.swift in Sources */,
 				86A7C2AD2A2E163200C9264A /* BookWormApp.swift in Sources */,
