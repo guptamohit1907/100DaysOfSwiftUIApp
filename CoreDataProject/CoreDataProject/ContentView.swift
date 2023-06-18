@@ -7,15 +7,18 @@
 
 import SwiftUI
 
+struct Student : Hashable {
+    let name : String
+}
+
 struct ContentView: View {
+    
+    let students = [Student(name: "Harry Potter"), Student(name: "Hermoine Granger")]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(students,id: \.self){ student in
+            Text(student.name)
         }
-        .padding()
     }
 }
 
