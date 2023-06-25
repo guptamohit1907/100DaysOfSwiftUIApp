@@ -17,12 +17,12 @@ struct ContentView: View {
             List {
                 ForEach(countries,id: \.self){ country in
                     Section(country.wrappedFullName){
-                    ForEach(country.candyArray,id: \.self) { candy in
-                        Text(candy.wrappedName)
+                        ForEach(country.candyArray,id: \.self) { candy in
+                            Text(candy.wrappedName)
+                        }
                     }
                 }
             }
-        }
             Button("Add Examples"){
                 let candy1 = Candy(context: moc)
                 candy1.name = "Mars"
@@ -48,13 +48,14 @@ struct ContentView: View {
                 candy4.origin?.shortName = "CH"
                 candy4.origin?.fullName = "Switzerland"
                 
-                try? moc.save()                
+                try? moc.save()
             }
+        }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
