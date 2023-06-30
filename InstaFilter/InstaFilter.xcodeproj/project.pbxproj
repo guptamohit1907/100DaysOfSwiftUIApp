@@ -11,6 +11,7 @@
 		8606E3E32A4E240500740F82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606E3E22A4E240500740F82 /* ContentView.swift */; };
 		8606E3E52A4E240600740F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8606E3E42A4E240600740F82 /* Assets.xcassets */; };
 		8606E3E82A4E240600740F82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8606E3E72A4E240600740F82 /* Preview Assets.xcassets */; };
+		8606E3EF2A4EEAFB00740F82 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8606E3EE2A4EEAFB00740F82 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		8606E3E22A4E240500740F82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8606E3E42A4E240600740F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8606E3E72A4E240600740F82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8606E3EE2A4EEAFB00740F82 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		8606E3DF2A4E240500740F82 /* InstaFilter */ = {
 			isa = PBXGroup;
 			children = (
+				8606E3EE2A4EEAFB00740F82 /* ImagePicker.swift */,
 				8606E3E02A4E240500740F82 /* InstaFilterApp.swift */,
 				8606E3E22A4E240500740F82 /* ContentView.swift */,
 				8606E3E42A4E240600740F82 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8606E3EF2A4EEAFB00740F82 /* ImagePicker.swift in Sources */,
 				8606E3E32A4E240500740F82 /* ContentView.swift in Sources */,
 				8606E3E12A4E240500740F82 /* InstaFilterApp.swift in Sources */,
 			);
