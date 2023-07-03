@@ -19,21 +19,16 @@ struct ImagePicker : UIViewControllerRepresentable {
             self.parent = parent
         }
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            picker.delegate = self
             picker.dismiss(animated: true)
             
-            guard let provider = results.first?.itemProvider else {
-                return
-            }
+            guard let provider = results.first?.itemProvider else { return }
             
-            if provider.canLoadObject(ofClass: UIImage.self){
+            if provider.canLoadObject(ofClass: UIImage.self) {
                 provider.loadObject(ofClass: UIImage.self) { image, _ in
-                    self.parent.image = image
+                    self.parent.image = image as? UIImage
                 }
             }
         }
-      
-         
     }
     
     func makeUIViewController(context: Context) -> PHPickerViewController {
