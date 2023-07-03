@@ -14,9 +14,16 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            image?.resizable().scaledToFit()
+            image?.resizable().scaledToFit()            
             Button("Select Image"){
                 showingImagePicker = true
+            }
+            Button("Save Image"){
+                guard let inputImage = inputImage else { return }
+                
+                let imageSaver = ImageSaver()
+                imageSaver.writeToPhotoAlbum(image: inputImage)
+                 
             }
         }.sheet(isPresented: $showingImagePicker){
             ImagePicker(image: $inputImage)
@@ -31,6 +38,7 @@ struct ContentView: View {
             return
         }
         image = Image(uiImage: inputImage)
+        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
         
     }
 }

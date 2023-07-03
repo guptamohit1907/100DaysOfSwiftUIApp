@@ -19,6 +19,7 @@ struct ImagePicker : UIViewControllerRepresentable {
             self.parent = parent
         }
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.delegate = self
             picker.dismiss(animated: true)
             
             guard let provider = results.first?.itemProvider else {
