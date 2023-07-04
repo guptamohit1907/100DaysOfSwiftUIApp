@@ -25,6 +25,7 @@
 		86B9B36F2A54309E009F200C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		86B9B3712A543D85009F200C /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		86B9B3732A54497B009F200C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		86B9B3752A545105009F200C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		86B9B3362A53F045009F200C /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				86B9B3752A545105009F200C /* Info.plist */,
 				86B9B3732A54497B009F200C /* Result.swift */,
 				86B9B3712A543D85009F200C /* EditView.swift */,
 				86B9B36F2A54309E009F200C /* Location.swift */,
@@ -282,6 +284,7 @@
 				DEVELOPMENT_TEAM = 7K4S55GKB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "Allow Access to Directory";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -314,6 +317,7 @@
 				DEVELOPMENT_TEAM = 7K4S55GKB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "Allow Access to Directory";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
