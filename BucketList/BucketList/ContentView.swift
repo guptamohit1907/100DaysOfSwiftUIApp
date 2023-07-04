@@ -7,15 +7,34 @@
 
 import SwiftUI
 
+struct User : Identifiable, Comparable {
+    let id = UUID()
+    let firstName : String
+    let lastName : String
+    
+    static func <(lhs : User, rhs : User) -> Bool {
+        lhs.lastName < rhs.lastName
+    }
+}
+
 struct ContentView: View {
+    let users = [
+         User(firstName: "Arnold", lastName: "Rimmer"),
+         User(firstName: "Kristinie", lastName: "Kochanski"),
+         User(firstName: "David", lastName: "List"),
+    ].sorted{
+        $0.lastName < $1.lastName
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List(users){ user in
+            Text("\(user.firstName) \(user.lastName)")
         }
-        .padding()
+    }
+    
+    func example(){
+        let result = 4 < 5
+        
     }
 }
 
