@@ -7,35 +7,28 @@
 
 import SwiftUI
 
-struct User : Identifiable, Comparable {
-    let id = UUID()
-    let firstName : String
-    let lastName : String
-    
-    static func <(lhs : User, rhs : User) -> Bool {
-        lhs.lastName < rhs.lastName
-    }
-}
-
 struct ContentView: View {
-    let users = [
-         User(firstName: "Arnold", lastName: "Rimmer"),
-         User(firstName: "Kristinie", lastName: "Kochanski"),
-         User(firstName: "David", lastName: "List"),
-    ].sorted{
-        $0.lastName < $1.lastName
-    }
     
     var body: some View {
-        List(users){ user in
-            Text("\(user.firstName) \(user.lastName)")
-        }
+       Text("Hello World")
+            .onTapGesture {
+                let str = "Test Message"
+                let url = getDocumentDirectory().appendingPathExtension("message.txt")
+                do {
+                    try str.write(to: url, atomically: true, encoding: .utf8)
+                    let input = try String(contentsOf: url)
+                    print(input)
+                } catch{
+                    print(error.localizedDescription)
+                }
+            }
     }
     
-    func example(){
-        let result = 4 < 5
-        
+    func getDocumentDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
