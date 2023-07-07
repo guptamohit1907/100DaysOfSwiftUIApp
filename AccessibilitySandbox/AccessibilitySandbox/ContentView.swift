@@ -7,15 +7,37 @@
 
 import SwiftUI
 
+
+//ales-krivec-15949
+// galina-n-189483
+//kevin-horstmann-141705
+//nicolas-tissot-335096
+
 struct ContentView: View {
+    let pictures = [
+         "ales-krivec-15949",
+         "galina-n-189483",
+         "kevin-horstmann-141705",
+         "nicolas-tissot-335096"
+    ]
+    
+    let labels = [
+         "Tulips",
+         "Frozen tree buds",
+         "Sunflowers",
+         "Fireworks"
+    ]
+    
+    @State private var selectedPictures = Int.random(in: 0...3)
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Image(pictures[selectedPictures])
+            .resizable()
+            .scaledToFit()
+            .onTapGesture {
+                selectedPictures = Int.random(in: 0...3)
+            }.accessibilityLabel(labels[selectedPictures])
+            .accessibilityAddTraits(.isButton)
+            .accessibilityRemoveTraits(.isImage)
     }
 }
 
