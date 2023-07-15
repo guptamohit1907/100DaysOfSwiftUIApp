@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     let card : Card
-    let removal : (() -> Void)? = nil
+    var removal : (() -> Void)? = nil
     
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @State private var isShowingAnswer = false
