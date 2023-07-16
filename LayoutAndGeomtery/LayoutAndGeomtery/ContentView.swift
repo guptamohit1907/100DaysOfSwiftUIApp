@@ -1,25 +1,53 @@
-//
 //  ContentView.swift
 //  LayoutAndGeomtery
 //
 //  Created by Mohit Gupta on 16/07/23.
-//
 
 import SwiftUI
 
+extension VerticalAlignment{
+    enum MidAccountName : AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[.top]
+        }
+    }
+    static let midAccountName = VerticalAlignment(MidAccountName.self)
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading){
-            ForEach(0..<10){position in
-                Text("Number \(position)")
-                    .alignmentGuide(.leading) { _ in
-                        Double(position) * -10
+        HStack(alignment: .midAccountName){
+            VStack{
+                Text("@twostraws")
+                    .alignmentGuide(.midAccountName) { d  in
+                        d[VerticalAlignment.center]
                     }
+                Image("paul-hudson")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+            }
+            VStack{
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("Full name :")
+                Text("PAUL HUDSON")
+                    .alignmentGuide(.midAccountName, computeValue: { d in
+                        d[VerticalAlignment.center]
+                    })
+                    .font(.largeTitle)
             }
         }
-        .background(.red)
-        .frame(width: 400, height: 400)
-        .background(.blue)
     }
 }
 
