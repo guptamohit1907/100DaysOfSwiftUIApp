@@ -12,7 +12,7 @@ extension View {
         if UIDevice.current.userInterfaceIdiom == .phone{
             self.navigationViewStyle(.stack)
         } else {
-            
+            self
         }
     }
 }
