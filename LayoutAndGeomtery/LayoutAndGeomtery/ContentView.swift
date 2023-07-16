@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding(20)
-            .background(.red)
+        VStack(alignment: .leading){
+            ForEach(0..<10){position in
+                Text("Number \(position)")
+                    .alignmentGuide(.leading) { _ in
+                        Double(position) * -10
+                    }
+            }
+        }
+        .background(.red)
+        .frame(width: 400, height: 400)
+        .background(.blue)
     }
 }
 
