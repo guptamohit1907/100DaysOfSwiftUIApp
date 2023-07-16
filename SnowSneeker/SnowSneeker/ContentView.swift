@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+extension View {
+    @ViewBuilder func phoneOnlyNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone{
+            self.navigationViewStyle(.stack)
+        } else {
+            
+        }
+    }
+}
+
+
 struct ContentView: View {
     let resorts : [Resort] = Bundle.main.decode("resorts.json")
     
@@ -35,7 +46,10 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Resorts")
+            
+            WelcomeView()
         }
+        .phoneOnlyNavigationView()
     }
 }
 
